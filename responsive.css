@@ -1,0 +1,25 @@
+@media (max-width:360px) {
+  .display-result { font-size:2.2rem; }
+  .key { font-size:1.2rem; border-radius:14px; }
+  .keypad { gap:8px; }
+}
+@media (max-height:640px) {
+  .display { min-height:96px; }
+  .key { height:46px; }
+  .sci .key { height:38px; }
+}
+@media (orientation:landscape) and (max-height:480px) {
+  .app { max-width:720px; gap:8px; }
+  .key { height:40px; font-size:1.1rem; }
+  .keypad, .sci { gap:6px; margin-top:8px; }
+  .display { min-height:76px; }
+}
+@media (min-width:600px) {
+  body { align-items:center; padding:24px; }
+}
+@supports (padding:max(0px)) {
+  .app {
+    padding-left:max(12px,env(safe-area-inset-left)); padding-right:max(12px,env(safe-area-inset-right));
+    padding-top:max(12px,env(safe-area-inset-top)); padding-bottom:max(12px,env(safe-area-inset-bottom));
+  }
+}

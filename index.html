@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f5f9">
+<title>الآلة الحاسبة</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="themes.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <h1 class="title" data-i18n="title"></h1>
+    <div class="top-actions">
+      <button class="icon-btn" id="btn-history" type="button" aria-label="History">🕘</button>
+      <button class="icon-btn" id="btn-sound" type="button" aria-label="Sound">🔇</button>
+      <button class="icon-btn" id="btn-lang" type="button" aria-label="Language">EN</button>
+      <button class="icon-btn" id="btn-theme" type="button" aria-label="Theme">🌙</button>
+    </div>
+  </header>
+  <nav class="mode-nav" id="nav"></nav>
+  <main>
+    <section class="panel" id="panel-calc">
+      <div class="display">
+        <div class="display-expression" id="expr"></div>
+        <div class="display-result" id="result">0</div>
+      </div>
+      <div class="sci" id="sci" hidden></div>
+      <div class="keypad" id="keypad"></div>
+    </section>
+    <section class="panel" id="panel-percent" hidden></section>
+    <section class="panel" id="panel-discount" hidden></section>
+    <section class="panel" id="panel-converter" hidden></section>
+    <section class="panel" id="panel-date" hidden></section>
+  </main>
+</div>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-box">
+    <div class="sheet-head">
+      <b data-i18n="history"></b>
+      <button class="icon-btn" id="sheet-close" type="button">✕</button>
+    </div>
+    <div class="hist-list" id="hist-list"></div>
+    <button class="key danger" id="hist-clear" type="button" data-i18n="clearAll"></button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="storage.js" defer></script>
+<script src="settings.js" defer></script>
+<script src="history.js" defer></script>
+<script src="calculator.js" defer></script>
+<script src="scientific.js" defer></script>
+<script src="percentage.js" defer></script>
+<script src="converter.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
